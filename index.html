@@ -4,53 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
     <title>WeatherApp_DOM</title>
   </head>
   <body>
     <!-- <nav><h2 class="nav_heading">Weather Application DOM</h2></nav> -->
     <main class="m-auto h-[90vh] w-[95vw]">
-      <div id="w_cards" class="z-99 flex flex-col sm:w-[60vw] sm:h-[60vh] m-auto border-[5px] border-orange-300">
-        <h2 class="text-center top-0 relative w-[100%] bg-blue-200 text-blue-400 text-xl py-3">Weather Application DOM</h2>
+      <div
+        id="w_cards"
+        class="z-99 flex flex-col sm:w-[60vw] sm:h-[60vh] m-auto border-[5px] border-orange-300"
+      >
+        <h2
+          class="text-center top-0 relative w-[100%] bg-blue-200 text-blue-400 text-xl py-3"
+        >
+          Weather Application DOM
+        </h2>
         <!-- Search Section -->
-        <div class="basis-1/3 pt-5 m-auto">
-            <input class="border-2 border-black px-5 py-2" type="text" placeholder="Enter City name">
-            <button class="border-2 border-black text-white bg-black px-5 py-2">Search</button>
+        <div class="basis-1/3 m-auto">
+          <form id="w_form" class="border-2 m-auto">
+            <input type="text"
+              name="Search"
+              id="w_input"
+              class="stell"
+              placeholder="Enter City name"
+            >
+            <button onclick="getData(event)" type="button">Search</button>
+          </form>
         </div>
         <!-- Location Details Section -->
-        <div class="flex basis-1/3 text-center">
-          <div id="card_country" class=" basis-1/3">
+        <div class="flex basis-1/3 text-center gap-[0%]">
+          <div id="card_country" class="basis-1/3">
             <h3>Country</h3>
             <div id="w_country">__</div>
           </div>
-          <div id="card_state" class=" basis-1/3">
-            <h3>State</h3>
+          <div id="card_state" class="basis-1/3">
+            <h3>State/Region</h3>
             <div id="w_state">__</div>
           </div>
-          <div id="card_city" class=" basis-1/3">
+          <div id="card_city" class="basis-1/3">
             <h3>City</h3>
             <div id="w_city">__</div>
           </div>
         </div>
         <!-- Condition section -->
         <div class="flex text-center gap-5 basis-1/3">
-          <div id="card_temp" class=" basis-1/4">
+          <div id="card_temp" class="basis-1/4">
             <h3>Temparature</h3>
-            <div id="card_temp">__</div><sup>o</sup><code>C</code>
+            <div id="w_temp">__</div>
+            <sup>o</sup><code>C</code>
           </div>
-          <div id="card_humidity" class=" basis-1/4">
+          <div id="card_humidity" class="basis-1/4">
             <h3>Humidity</h3>
             <div id="w_humidity">__</div>
           </div>
-          <div id="card_wind" class=" basis-1/4">
+          <div id="card_wind" class="basis-1/4">
             <h3>Wind Speed</h3>
             <div id="w_wind">__</div>
             /kmph
           </div>
           <div id="card_logo" class="basis-1/4">
-            <div><img src="" alt="Wheather logo"></div>
+            <div>
+              <img src="" alt="logo" id="w_icon">
+            </div>
             <div id="w_value">__</div>
           </div>
         </div>
@@ -60,4 +76,5 @@
       </aside>
     </main>
   </body>
+  <script src="script.js"></script>
 </html>
