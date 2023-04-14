@@ -8,31 +8,67 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>WeatherApp_DOM</title>
   </head>
-  <body>
-    <!-- <nav><h2 class="nav_heading">Weather Application DOM</h2></nav> -->
-    <main class="m-auto h-[90vh] w-[95vw]">
-      <div
-        id="w_cards"
-        class="z-99 flex flex-col sm:w-[60vw] sm:h-[60vh] m-auto border-[5px] border-orange-300"
-      >
-        <h2
-          class="text-center top-0 relative w-[100%] bg-blue-200 text-blue-400 text-xl py-3"
-        >
-          Weather Application DOM
-        </h2>
-        <!-- Search Section -->
-        <div class="basis-1/3 m-auto">
-          <form id="w_form" class="border-2 m-auto">
-            <input type="text"
+  <body class="bg-[#C8DEE2]">
+    <!-- bg image style="background-image: url(./assets/bg_clouds_pct.jpg); -->
+    <nav class="w-full py-3 lg:flex lg:pr-[16%] lg:pl-[8%] px-4 border-2 justify-between bg-slate-500 rounded-2xl">
+      <!-- nav bar logo left section -->
+      <div>
+        <h2 class="text-[24px] shadow-black">Weath_R <span class="text-orange-400 ">Today</span></h2>
+      </div>
+      <!-- nav bar Right Search section  -->
+        <div class="flex flex-col items-center">
+          <form id="w_form" class="basis-1/2  rounded-2xl">
+            <input
+              type="text"
               name="Search"
               id="w_input"
-              class="stell"
+              class="px-4 py-1 rounded-2xl basis-3/4"
               placeholder="Enter City name"
-            >
-            <button onclick="getData(event)" type="button">Search</button>
+            />
+            <button onclick="getData(event)" class="basis-1/4 px-4 py-1 bg-black text-white rounded-2xl" type="button">Search</button>
           </form>
         </div>
-        <!-- Location Details Section -->
+    </nav>
+    <!-- Main - Weather Report section -->
+    <section class="bg-auto py-3 w-[65vw] m-auto">
+      <div 
+      class="border-2"
+      >
+        <!-- 1. Weather Image and Temparature  -->
+        <div>
+          <img src="" alt="logo" id="w_icon"/>
+        </div>
+        <div id="card_temp" class="">
+          <div id="w_temp">__ <span><sup>o</sup>C</span></div>
+          <div id="W_temp_words" class="">__</div>
+        </div>
+      </div>
+      <!-- 2. City Discription Section  -->
+      <div class="border-2">
+        <div>
+          <span id="w_city" class="text-2xl font-bold">__</span>,<span id="w_state" class="font-bold">__</span>,<span id="w_country" class="font-bold">__</span>
+        </div>
+        <div>Date :<span id="#W_date">----/--/--</span></div>
+      </div>
+      <!-- 3. Other Parameters values -->
+      <div class="border-2">
+        <div><span id="w_dire">__</span></div>
+        <div><span id="w_humidity">__</span></div>
+        <div><span id="w_wind">__</span></div>
+        <div><span id="w_temp">__</span></div>
+      </div>
+    </section>
+
+    <!-- old Section  -->
+
+    <!-- <main class="m-[10vh] h-[100%]">
+      <div id="w_cards" class="z-99 flex flex-col sm:w-[60vw] sm:h-[60vh] m-auto border-2 border-slate-500">
+        <h2 class="text-center top-0 relative w-[100%] bg-blue-200 text-blue-400 text-xl py-3">
+          Weather Application DOM
+        </h2>
+
+        // Location Details Section
+        
         <div class="flex basis-1/3 text-center gap-[0%]">
           <div id="card_country" class="basis-1/3">
             <h3>Country</h3>
@@ -47,7 +83,9 @@
             <div id="w_city">__</div>
           </div>
         </div>
-        <!-- Condition section -->
+        
+        // Condition section
+
         <div class="flex text-center gap-5 basis-1/3">
           <div id="card_temp" class="basis-1/4">
             <h3>Temparature</h3>
@@ -65,16 +103,13 @@
           </div>
           <div id="card_logo" class="basis-1/4">
             <div>
-              <img src="" alt="logo" id="w_icon">
+              <img src="" alt="logo" id="w_icon" />
             </div>
             <div id="w_value">__</div>
           </div>
         </div>
       </div>
-      <aside>
-        <!-- last 7days Tempatature's box -->
-      </aside>
-    </main>
+    </main> -->
   </body>
   <script src="script.js"></script>
 </html>
