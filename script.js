@@ -1,5 +1,4 @@
 //defining variables and holding elements
-var dict=["hello","hai","abb","bbrt"]
 
 var data;
 const w_input=document.querySelector("#w_input")
@@ -64,18 +63,15 @@ var getData= async (event)=>{
 var hiSt=''
 
 function srchM(event){
-    if(event.code.length!=4){
-        return
-    }
-    var e=document.getElementById("lst");
-    hiSt=hiSt+event.code[event.code.length-1]
-    console.log(hiSt.toLowerCase())
-    var tmp=dict.filter(s=> s.startsWith(hiSt.toLowerCase()))
-    if(tmp.length>=5){
-        tmp.slice(0,-1).forEach((x)=>{document.querySelector(`lst:nth-child(${tmp.indexOf(x)+1})`).value=x})
-    }
-    
-}
-function srch(arr){
+    var e=document.getElementById("w_input");
+    // hiSt=hiSt+event.code[event.code.length-1]
+    var tmp=dict.filter(s=> s.startsWith(e.value.charAt(0).toUpperCase()+e.value.slice(1)))
+    tmp=tmp.slice(0,5)
+    document.querySelector("#lst").innerHTML="";
+    tmp.forEach((x)=>{
+        var y=document.createElement("option");
+        y.value=x
+        document.querySelector("#lst").appendChild(y)
+    })    
     
 }

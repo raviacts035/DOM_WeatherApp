@@ -28,7 +28,7 @@
               class="px-4 py-1 rounded-2xl basis-3/4"
               placeholder="Enter City name"
             />
-            <datalist id="lst">
+            <datalist id="lst" class="hell">
               <option value="Chacolate">
               <option value="indior">
               <option value="ongole">
@@ -42,7 +42,7 @@
       <h2 class="text-4xl">Enter a Valid city Name</h2>
     </div>
     <!-- Main - Weather Report section -->
-    <section class="backdrop-blur-lg bg-auto py-3 w-[65vw] border-4 px-5 my-8 border-slate-800 m-auto text-slate-800 shadow-6xl">
+    <section class="backdrop-blur-lg bg-auto py-3 w-[65vw] border-4 px-5 my-8 border-slate-800 m-auto text-white shadow-6xl">
       <!-- 1. Weather Image and Temparature  -->
       <div class="flex justify-around text-center items-center">
         <div>
@@ -56,8 +56,8 @@
       </div>
       <!-- 2. City and Date Section  -->
       <div class="py-1">
-        <div class="lg:pl-[10%] py-2">
-          <span id="w_city" class="font-bold text-2xl"></span> /<span id="w_state">Enter a city name</span>/ <span id="w_country" class="font-bold"></span>
+        <div class="text-center py-2">
+          <span id="w_city" class="font-bold text-2xl"></span> /<span class="font-bold" id="w_state">Enter a city name</span>/ <span id="w_country" class="font-bold"></span>
         </div>
       <hr class="w-full bg-black">
         <div class="flex py-5 font-bold text-2xl justify-around">
@@ -86,5 +86,6 @@
       </div>
     </section>
   </body>
+  <script src="citys.js"></script>
   <script src="script.js"></script>
 </html>
