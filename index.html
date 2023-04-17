@@ -20,12 +20,19 @@
         <div>
           <form id="w_form" class="flex items-center gap-1 rounded-2xl">
             <input
-              type="text"
+              type="search"
               name="Search"
               id="w_input"
+              list="lst"
+              onkeydown="srchM(event)"
               class="px-4 py-1 rounded-2xl basis-3/4"
               placeholder="Enter City name"
             />
+            <datalist id="lst">
+              <option value="Chacolate">
+              <option value="indior">
+              <option value="ongole">
+            </datalist>
             <button onkeypress="getData(event)" onclick="getData(event)" class="basis-1/4 px-4 py-1 bg-black text-white rounded-2xl" type="button">Search</button>
           </form>
         </div>
@@ -78,7 +85,6 @@
         </div>
       </div>
     </section>
-
   </body>
   <script src="script.js"></script>
 </html>
