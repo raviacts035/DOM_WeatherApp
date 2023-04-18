@@ -27,7 +27,7 @@ var getData= async (event)=>{
     }
     const city=w_input.value 
     try{
-        var fetchData= await fetch(`http://api.weatherapi.com/v1/current.json?key=529cee31f2ba4da986754455231304&q=${city}`)
+        var fetchData= await fetch(`https://api.weatherapi.com/v1/current.json?key=529cee31f2ba4da986754455231304&q=${city}`)
     }
     catch(error){
         console.log(error)
