@@ -30,7 +30,7 @@ var getData= async (event)=>{
         var fetchData= await fetch(`http://api.weatherapi.com/v1/current.json?key=529cee31f2ba4da986754455231304&q=${city}`)
     }
     catch(error){
-        console.log("Catched Error")
+        console.log(error)
         document.querySelector("section").style.visibility="hidden"
         document.querySelector("#val_").removeAttribute("hidden")
         return;

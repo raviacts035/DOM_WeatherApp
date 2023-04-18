@@ -4,28 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="styles.css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <title>WeatherApp_DOM</title>
   </head>
-  <body class="bg-fixed bg-cover bg-no-repeat" style="background-image: url(./assets/bg_clouds_pct.jpg);">
+  <body class="bg-fixed w-full font-mono p-0 bg-cover bg-no-repeat" style="background-image: url(./assets/bg_clouds_pct.jpg);">
     <!-- bg image style="background-image: url(./assets/bg_clouds_pct.jpg);"" -->
     <!-- class="bg-[#C8DEE2]" -->
-    <nav class="w-full py-3 sm:flex px-4 justify-around bg-slate-600 rounded-2xl">
+    <nav class="w-full py-3 sm:flex px-4 top-0 z-99 justify-around m-auto bg-slate-600 rounded-2xl">
       <!-- nav bar logo left section -->
       <div>
         <h2 class="text-[24px] text-[#8DE76D] w-fit">Weath_R <span class="text-orange-400">Today</span></h2>
       </div>
       <!-- nav bar Right Search section  -->
         <div>
-          <form id="w_form" class="flex items-center gap-1 rounded-2xl">
+          <form id="w_form" class="sm:flex items-center gap-1 rounded-2xl">
             <input
               type="search"
               name="Search"
               id="w_input"
               list="lst"
               onkeydown="srchM(event)"
-              class="px-4 py-1 rounded-2xl basis-3/4"
+              class="px-[10%] sm:px-5 my-1 py-1 rounded-2xl basis-3/4"
               placeholder="Enter City name"
             />
             <datalist id="lst" class="hell">
@@ -42,15 +41,15 @@
       <h2 class="text-4xl">Enter a Valid city Name</h2>
     </div>
     <!-- Main - Weather Report section -->
-    <section class="backdrop-blur-lg bg-auto py-3 w-[65vw] border-4 px-5 my-8 border-slate-800 m-auto text-white shadow-6xl">
+    <section class="backdrop-blur-lg bg-auto py-3 w-[65vw] border-4 z-0 px-5 my-8 border-slate-800 m-auto text-white shadow-6xl">
       <!-- 1. Weather Image and Temparature  -->
-      <div class="flex justify-around text-center items-center">
+      <div class="sm:flex justify-around text-center items-center">
         <div>
           <img class="h-[100px] rounded-2xl" src="./assets/Funny_logo.PNG" alt="logo" id="w_icon"/>
           <div id="w_text" class="text-3xl font-bold">__</div>
         </div>
         <div id="card_temp" class="py-3">
-          <span id="w_temp" class="text-[6rem]">00</span><sup>o</sup><span>C</span>
+          <span id="w_temp" class="text-6xl sm:text-[6rem]">00</span><sup>o</sup><span>C</span>
           <div id="W_temp_words" class="">__</div>
         </div>
       </div>
@@ -60,26 +59,26 @@
           <span id="w_city" class="font-bold text-2xl"></span> /<span class="font-bold" id="w_state">Enter a city name</span>/ <span id="w_country" class="font-bold"></span>
         </div>
       <hr class="w-full bg-black">
-        <div class="flex py-5 font-bold text-2xl justify-around">
+        <div class="sm:flex my-2 py-5 font-bold text-2xl justify-around">
           <div>Date :<span id="w_date">----/--/--</span></div>
           <div>Time :<span id="w_time">--:--</span></div>
         </div>
       </div>
       <hr class="w-full bg-black">
       <!-- 3. Other Parameters Cards -->
-      <div class="flex justify-between py-5 text-center">
-        <div class="h-[200px] rounded-2xl p-4 drop-shadow-2xl z-9 bg-slate-400">
-          <img src="./assets/humidity_logo.PNG" class="h-[75%] rounded-[50%] w-auto border-slate-500" alt="">
+      <div class="sm:flex justify-between py-5 text-center">
+        <div class="h-[200px] my-1 rounded-2xl p-4 drop-shadow-2xl z-9 bg-slate-400">
+          <img src="./assets/humidity_logo.PNG" class="h-[75%] rounded-[40%] w-auto border-slate-500" alt="">
           <h3 class="py-1">Humidity</h3>
           <span id="w_humidity">__</span> %
         </div>
-        <div class="h-[200px] rounded-2xl p-4 drop-shadow-2xl z-9 bg-slate-400">
-          <img src="./assets/wind_logo.PNG" class="h-[75%] rounded-[50%] w-auto border-slate-500" alt="">
+        <div class="h-[200px] my-1 rounded-2xl p-4 drop-shadow-2xl z-9 bg-slate-400">
+          <img src="./assets/wind_logo.PNG" class="h-[75%] rounded-[40%] w-auto border-slate-500" alt="">
           <h3 class="py-1">Wind speed</h3>
           <span id="w_wind">__</span> kmph
         </div>
-        <div class="h-[200px] rounded-2xl p-4 drop-shadow-4xl z-9 bg-slate-400">
-          <img src="./assets/cloud_logo.PNG" class="h-[75%] rounded-[50%] w-auto border-slate-500" alt="">
+        <div class="h-[200px] my-1 rounded-2xl p-4 drop-shadow-4xl z-9 bg-slate-400">
+          <img src="./assets/cloud_logo.PNG" class="h-[75%] rounded-[40%] w-auto border-slate-500" alt="">
           <h3 class="py-1">Cloud</h3>
           <span id="w_cloud">__</span>
         </div>
